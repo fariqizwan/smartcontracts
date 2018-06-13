@@ -1,10 +1,12 @@
 pragma solidity ^0.4.19;
 
 contract calc {
+	address creator;
 	mapping (uint8 => uint8) public data;
 	uint8 private index = 1;
 
 constructor() public {
+	creator = msg.sender;
 	data[index] = 100;
 }
 
